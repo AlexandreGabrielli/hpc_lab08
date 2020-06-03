@@ -140,8 +140,8 @@ static size_t __ifs(struct img_t *img, const struct ifs_t *ifs, size_t passes, s
    rand_idxs = _mm_set_epi32(rand(), rand(), rand(), rand());
 
 
-
-    for (size_t iterations = count_points; iterations != 0; iterations--) {
+    
+    for (size_t iterations = count_points/4; iterations != 0; iterations--) {
         /* Randomly choose an affine transform 
         size_t rand_idx = xorshift32(&rand_state) % ifs->nb_transforms;*/
 
